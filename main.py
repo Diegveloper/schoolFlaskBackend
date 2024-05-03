@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, abort
 from flask_cors import CORS, cross_origin
 import json
+import pprint
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -13,8 +14,25 @@ def ping():
 @app.route('/authorization', methods=['GET'])
 def validateToken():
     print("hola")
-    abort(401, "Invalid Token")
-    #return jsonify({"status":"200"})
+    #abort(401, "Invalid Token")
+    return jsonify({"status":"200"})
+
+@app.route('/students',methods=['GET'])
+def getStudent():
+    userId = request.args.get('id')
+    if "Authorization" not in request.headers:
+        abort(401, "no token")
+    data = loadData("student.json")
+    try:
+        for i in data['students']:
+            if i['id'] == userId:
+                return jsonify(i)
+        
+
+    except:
+        abort(404, "no token")
+
+    
 
 @app.route('/login',methods=['POST'])
 def validateLoginCredentials():
