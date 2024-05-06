@@ -1,10 +1,10 @@
 {
     "students": [
     {
-      "id": "2",
+      "id": "1",
       "currentCourses": [
         {
-          "languague": "English",
+          "language": "English",
           "level": "Advanced 3",
           "id": 1,
           "teacher": "Ingrid Román",
@@ -51,11 +51,11 @@
       "phone": ""
     },
     {
-        "id": "3",
+        "id": "2",
         "currentCourses": [
           {
-            "languague": "English",
-            "level": "Advanced 3",
+            "language": "English",
+            "level": "Basic 3",
             "id": 1,
             "teacher": "Ingrid Román",
             "startDate": "04-11-2023",
@@ -92,9 +92,9 @@
             "classRoom": 1
           },
           {
-            "languague": "German",
-            "level": "Advanced 3",
-            "id": 1,
+            "language": "German",
+            "level": "Advanced 1",
+            "id": 2,
             "teacher": "Ingrid Román",
             "startDate": "04-11-2023",
             "endDate": "03-12-2023",
@@ -121,7 +121,12 @@
               },
               {
                 "name": "Writing",
-                "value": 10,
+                "value": 8,
+                "notes": ""
+              },
+              {
+                "name": "Final project",
+                "value": 8,
                 "notes": ""
               }
             ],
